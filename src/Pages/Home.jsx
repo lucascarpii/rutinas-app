@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Layout } from '../Components/Layout';
 
 const Home = () => {
   const [selectedDay, setSelectedDay] = useState('1');
@@ -14,7 +15,7 @@ const Home = () => {
   const dias = Object.keys(Rutina);
 
   return (
-    <div className="p-4">
+    <Layout>
       <section className="mb-4 flex justify-between p-4 bg-neutral-100 rounded-lg">
         <div>
           <p className="text-lg text-gray-700 font-bold">Hola <span className="text-orange-500">Lucas</span>, listo para entrenar?</p>
@@ -23,7 +24,7 @@ const Home = () => {
       </section>
       <section className="">
         <div className="flex justify-between items-end mb-3 px-1">
-          <h2 className="font-semibold text-gray-600">Tu rutina</h2>
+          <h2 className="font-semibold text-gray-600">Rutina actual</h2>
           <select className="px-2 text-sm outline-none text-indigo-500 font-medium" value={selectedDay} onChange={(e) => setSelectedDay(e.target.value)}>
             {dias.map((dia, index) => (
               <option key={index} value={dia}>Día {dia}</option>
@@ -46,7 +47,7 @@ const Home = () => {
           ))}
         </ul>
       </section>
-    </div>
+    </Layout>
   )
 }
 
