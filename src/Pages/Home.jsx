@@ -24,7 +24,7 @@ const Home = () => {
       <section className="">
         <div className="flex justify-between items-end mb-3 px-1">
           <h2 className="font-semibold text-gray-600">Tu rutina</h2>
-          <select className="px-2 outline-none text-indigo-500 font-medium" value={selectedDay} onChange={(e) => setSelectedDay(e.target.value)}>
+          <select className="px-2 text-sm outline-none text-indigo-500 font-medium" value={selectedDay} onChange={(e) => setSelectedDay(e.target.value)}>
             {dias.map((dia, index) => (
               <option key={index} value={dia}>Día {dia}</option>
             ))}
